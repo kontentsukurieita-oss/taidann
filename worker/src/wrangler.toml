@@ -1,0 +1,12 @@
+name = "taidan-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[durable_objects]
+bindings = [
+  { name = "TAIDAN_ROOM", class_name = "TaidanRoom" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["TaidanRoom"]
